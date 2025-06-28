@@ -9,9 +9,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen font-inter">
+    <div className="min-h-screen font-poppins bg-gray-50">
       <Header />
-      <main>
+      <main className="relative">
         {children}
       </main>
       <Footer />
