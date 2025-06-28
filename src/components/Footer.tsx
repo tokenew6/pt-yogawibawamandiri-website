@@ -19,12 +19,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-14 h-14 bg-gradient-to-br from-ywm-red to-red-700 rounded-xl flex items-center justify-center shadow-lg mr-4">
-                <div className="text-white font-bold">
-                  <div className="text-lg leading-none">YWM</div>
-                  <div className="text-xs opacity-90">PT</div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
+                alt="PT. Yoga Wibawa Mandiri Logo"
+                className="w-14 h-14 rounded-xl shadow-lg mr-4"
+              />
               <div>
                 <h3 className="font-bold text-xl">PT. Yoga Wibawa Mandiri</h3>
                 <p className="text-gray-300 text-sm">Pengantongan Semen Padang Lhokseumawe</p>
@@ -37,9 +36,11 @@ const Footer = () => {
             
             {/* Partnership Badge */}
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <div className="text-white font-bold text-xs">SP</div>
-              </div>
+              <img 
+                src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+                alt="Semen Padang Logo"
+                className="w-12 h-12 rounded-lg"
+              />
               <span className="text-gray-300 text-sm font-medium">Mitra Resmi Semen Padang</span>
             </div>
 

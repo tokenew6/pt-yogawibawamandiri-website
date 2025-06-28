@@ -24,12 +24,11 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo PT. YWM */}
           <div className="flex items-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-ywm-red to-red-700 rounded-xl flex items-center justify-center shadow-lg">
-              <div className="text-white font-bold">
-                <div className="text-lg leading-none">YWM</div>
-                <div className="text-xs opacity-90">PT</div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
+              alt="PT. Yoga Wibawa Mandiri Logo"
+              className="w-16 h-16 rounded-xl shadow-lg"
+            />
             <div className="ml-4">
               <h1 className="text-ywm-dark font-bold text-xl">PT. Yoga Wibawa Mandiri</h1>
               <p className="text-gray-600 text-sm">Pengantongan Semen Padang Lhokseumawe</p>
@@ -53,12 +52,11 @@ const Header = () => {
 
           {/* Logo Semen Padang */}
           <div className="hidden lg:flex items-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg mr-4">
-              <div className="text-white font-bold">
-                <div className="text-sm leading-none">SEMEN</div>
-                <div className="text-lg leading-none">PADANG</div>
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+              alt="Semen Padang Logo"
+              className="w-16 h-16 rounded-xl shadow-lg mr-4"
+            />
             <div>
               <p className="text-ywm-dark font-bold text-lg">Semen Padang</p>
               <p className="text-gray-600 text-sm">Mitra Resmi</p>
@@ -92,9 +90,11 @@ const Header = () => {
               ))}
               {/* Mobile Logo Semen Padang */}
               <div className="flex items-center justify-center pt-4 border-t border-gray-200">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-3">
-                  <div className="text-white font-bold text-xs">SP</div>
-                </div>
+                <img 
+                  src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+                  alt="Semen Padang Logo"
+                  className="w-12 h-12 rounded-lg mr-3"
+                />
                 <div>
                   <p className="text-ywm-dark font-semibold text-sm">Semen Padang</p>
                   <p className="text-gray-600 text-xs">Mitra Resmi</p>
