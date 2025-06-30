@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ChatBot from './ChatBot';
+import JSPuterAI from './JSPuterAI';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
-      <ChatBot />
+      <JSPuterAI />
     </div>
   );
 };
