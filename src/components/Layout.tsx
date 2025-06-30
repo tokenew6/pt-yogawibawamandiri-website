@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import JSPuterAI from './JSPuterAI';
+import VoiceAIAssistant from './VoiceAIAssistant';
 import PWAInstallPrompt from './PWAInstallPrompt';
+import UpdateNotificationService from './UpdateNotificationService';
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,8 +17,9 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
-      <JSPuterAI />
+      <VoiceAIAssistant />
       <PWAInstallPrompt />
+      <UpdateNotificationService />
     </div>
   );
 };

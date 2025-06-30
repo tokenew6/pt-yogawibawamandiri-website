@@ -14,6 +14,17 @@
 
 Modern responsive website untuk PT. Yoga Wibawa Mandiri - perusahaan pengantongan semen terpercaya di Lhokseumawe, Aceh. Website ini dibangun dengan teknologi React + TypeScript + TailwindCSS + Supabase dengan desain transparan dan modern.
 
+## 🚀 **LIVE DEMO**
+### **🌐 https://jakForever.github.io/pt-yogawibawamandiri-website**
+
+## 🆕 **NEW FEATURES 2024**
+- 🎤 **Voice AI Assistant** - Bicara dengan AI dalam bahasa Indonesia/Inggris
+- 🔔 **Smart Update Notifications** - Auto-update dengan teknologi PWA  
+- 📱 **Enhanced PWA** - Install sebagai aplikasi mobile/desktop
+- 🎯 **Advanced SEO** - Rich snippets dan optimasi media sosial
+- 🏠 **Add to Home Screen** - Shortcut icon di iOS/Android
+- 🌍 **Multi-language** - Dukungan lengkap Indonesia/English dengan flag switcher
+
 ## ✨ Features
 
 ### 🌐 Public Website
