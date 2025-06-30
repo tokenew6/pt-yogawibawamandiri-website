@@ -12,6 +12,7 @@ const Header = () => {
     { name: 'Tentang Kami', path: '/tentang' },
     { name: 'Layanan', path: '/layanan' },
     { name: 'Galeri', path: '/galeri' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Lokasi', path: '/lokasi' },
     { name: 'Kontak', path: '/kontak' },
   ];
@@ -27,7 +28,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
               alt="PT. Yoga Wibawa Mandiri Logo"
-              className="w-16 h-16 rounded-xl shadow-lg"
+              className="w-16 h-16"
             />
             <div className="ml-4">
               <h1 className="text-ywm-dark font-bold text-xl">PT. Yoga Wibawa Mandiri</h1>
@@ -55,7 +56,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
               alt="Semen Padang Logo"
-              className="w-16 h-16 rounded-xl shadow-lg mr-4"
+              className="w-16 h-16 mr-4"
             />
             <div>
               <p className="text-ywm-dark font-bold text-lg">Semen Padang</p>
@@ -93,7 +94,7 @@ const Header = () => {
                 <img 
                   src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
                   alt="Semen Padang Logo"
-                  className="w-12 h-12 rounded-lg mr-3"
+                  className="w-12 h-12 mr-3"
                 />
                 <div>
                   <p className="text-ywm-dark font-semibold text-sm">Semen Padang</p>
