@@ -1,0 +1,51 @@
+<svg width="200" height="240" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer black circle -->
+  <circle cx="100" cy="100" r="95" fill="#212121" stroke="#212121" stroke-width="3"/>
+  
+  <!-- Red circle -->
+  <circle cx="100" cy="100" r="90" fill="#C62828"/>
+  
+  <!-- Inner white circle for bull -->
+  <circle cx="100" cy="100" r="45" fill="white"/>
+  
+  <!-- Bull head silhouette (simplified) -->
+  <g transform="translate(100,100)" fill="#212121">
+    <!-- Bull head -->
+    <ellipse cx="0" cy="0" rx="25" ry="20"/>
+    <!-- Horns -->
+    <path d="M-20,-15 Q-25,-25 -18,-30 Q-15,-25 -15,-20"/>
+    <path d="M20,-15 Q25,-25 18,-30 Q15,-25 15,-20"/>
+    <!-- Eyes -->
+    <circle cx="-8" cy="-5" r="2" fill="white"/>
+    <circle cx="8" cy="-5" r="2" fill="white"/>
+    <!-- Nose -->
+    <ellipse cx="0" cy="8" rx="6" ry="4"/>
+    <circle cx="-2" cy="8" r="1" fill="white"/>
+    <circle cx="2" cy="8" r="1" fill="white"/>
+  </g>
+  
+  <!-- Circular text -->
+  <defs>
+    <path id="top-arc" d="M 25,100 A 75,75 0 0,1 175,100"/>
+    <path id="bottom-arc" d="M 175,100 A 75,75 0 0,1 25,100"/>
+  </defs>
+  
+  <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">
+      PADANG CEMENT
+    </textPath>
+  </text>
+  
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">
+      INDONESIA
+    </textPath>
+  </text>
+  
+  <!-- Bottom text -->
+  <text x="100" y="220" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="#212121">Sejak 1910</text>
+  
+  <!-- Small dots -->
+  <circle cx="30" cy="100" r="3" fill="white"/>
+  <circle cx="170" cy="100" r="3" fill="white"/>
+</svg>

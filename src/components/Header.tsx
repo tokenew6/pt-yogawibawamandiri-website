@@ -19,19 +19,19 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo PT. YWM */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
+              src="/logos/ywm-logo.svg" 
               alt="PT. Yoga Wibawa Mandiri Logo"
-              className="w-16 h-16 rounded-xl shadow-lg"
+              className="w-16 h-16 drop-shadow-lg"
             />
             <div className="ml-4">
-              <h1 className="text-ywm-dark font-bold text-xl">PT. Yoga Wibawa Mandiri</h1>
-              <p className="text-gray-600 text-sm">Pengantongan Semen Padang Lhokseumawe</p>
+              <h1 className="text-ywm-dark font-bold text-xl drop-shadow-sm">PT. Yoga Wibawa Mandiri</h1>
+              <p className="text-gray-700 text-sm drop-shadow-sm">Pengantongan Semen Padang Lhokseumawe</p>
             </div>
           </div>
 
@@ -53,13 +53,13 @@ const Header = () => {
           {/* Logo Semen Padang */}
           <div className="hidden lg:flex items-center">
             <img 
-              src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+              src="/logos/semen-padang-logo.svg" 
               alt="Semen Padang Logo"
-              className="w-16 h-16 rounded-xl shadow-lg mr-4"
+              className="w-16 h-16 drop-shadow-lg mr-4"
             />
             <div>
-              <p className="text-ywm-dark font-bold text-lg">Semen Padang</p>
-              <p className="text-gray-600 text-sm">Mitra Resmi</p>
+              <p className="text-ywm-dark font-bold text-lg drop-shadow-sm">Semen Padang</p>
+              <p className="text-gray-700 text-sm drop-shadow-sm">Mitra Resmi</p>
             </div>
           </div>
 
@@ -91,13 +91,13 @@ const Header = () => {
               {/* Mobile Logo Semen Padang */}
               <div className="flex items-center justify-center pt-4 border-t border-gray-200">
                 <img 
-                  src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+                  src="/logos/semen-padang-logo.svg" 
                   alt="Semen Padang Logo"
-                  className="w-12 h-12 rounded-lg mr-3"
+                  className="w-12 h-12 mr-3"
                 />
                 <div>
                   <p className="text-ywm-dark font-semibold text-sm">Semen Padang</p>
-                  <p className="text-gray-600 text-xs">Mitra Resmi</p>
+                  <p className="text-gray-700 text-xs">Mitra Resmi</p>
                 </div>
               </div>
             </div>

@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer red circle -->
+  <circle cx="100" cy="100" r="95" fill="#C62828" stroke="#212121" stroke-width="3"/>
+  
+  <!-- Inner white circle -->
+  <circle cx="100" cy="100" r="65" fill="white"/>
+  
+  <!-- YWM text in center -->
+  <text x="100" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#C62828">YWM</text>
+  
+  <!-- Circular text around the logo -->
+  <defs>
+    <path id="circle-top" d="M 35,100 A 65,65 0 0,1 165,100"/>
+    <path id="circle-bottom" d="M 165,100 A 65,65 0 0,1 35,100"/>
+  </defs>
+  
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+    <textPath href="#circle-top" startOffset="50%" text-anchor="middle">
+      PT YOGA WIBAWA MANDIRI
+    </textPath>
+  </text>
+  
+  <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+    <textPath href="#circle-bottom" startOffset="50%" text-anchor="middle">
+      LHOKSEUMAWE
+    </textPath>
+  </text>
+</svg>
