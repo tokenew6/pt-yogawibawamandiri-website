@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami", 
+    "services": "Layanan",
+    "gallery": "Galeri",
+    "location": "Lokasi",
+    "contact": "Kontak"
+  },
+  "home": {
+    "title": "PT. Yoga Wibawa Mandiri",
+    "subtitle": "Pengantongan Semen Padang Terpercaya di Lhokseumawe",
+    "description": "dengan Teknologi Modern dan Kualitas Terjamin",
+    "cta": {
+      "services": "Lihat Layanan Kami",
+      "contact": "Hubungi Kami"
+    },
+    "stats": {
+      "experience": "Tahun Pengalaman",
+      "capacity": "Ton Semen per Tahun", 
+      "certification": "Sertifikat Kualitas",
+      "ai_service": "Customer Service"
+    },
+    "about_preview": {
+      "title": "Tentang",
+      "highlight": "PT. Yoga Wibawa Mandiri",
+      "description1": "Didirikan sebagai mitra strategis Semen Padang di wilayah Aceh dan Sumatera Utara, PT. Yoga Wibawa Mandiri telah menjadi perusahaan pengantongan semen terpercaya dengan fasilitas modern di Pelabuhan Krueng Geukueh, Lhokseumawe.",
+      "description2": "Dengan komitmen terhadap kualitas dan pelayanan prima, kami melayani kebutuhan konstruksi di seluruh wilayah dengan distribusi yang efisien dan tepat waktu.",
+      "developer_credit": "Website AI-Powered ini dikembangkan oleh:",
+      "developer_name": "Mulky Malikul Dhaher",
+      "developer_title": "Technical Engineer - PT. Yoga Wibawa Mandiri",
+      "read_more": "Selengkapnya"
+    },
+    "services_preview": {
+      "title": "Layanan",
+      "highlight": "Unggulan",
+      "description": "Kami menyediakan layanan pengantongan dan distribusi semen berkualitas tinggi dengan teknologi modern dan standar internasional.",
+      "bagging": {
+        "title": "Pengantongan Semen",
+        "description": "Proses pengantongan otomatis dengan kapasitas besar dan kontrol kualitas ketat untuk memastikan produk berkualitas tinggi."
+      },
+      "distribution": {
+        "title": "Distribusi Luas", 
+        "description": "Jaringan distribusi yang mencakup seluruh Aceh dan Sumatera Utara dengan armada transport yang handal dan tepat waktu."
+      },
+      "ai_service": {
+        "title": "AI Customer Service",
+        "description": "Layanan pelanggan 24/7 dengan teknologi AI lokal yang memberikan respons cepat dan akurat untuk semua pertanyaan Anda."
+      },
+      "view_all": "Lihat Semua Layanan"
+    },
+    "cta_section": {
+      "title": "Siap Bermitra dengan Kami?",
+      "description": "Hubungi tim kami untuk konsultasi dan penawaran terbaik sesuai kebutuhan proyek konstruksi Anda.",
+      "contact_now": "Hubungi Sekarang",
+      "view_location": "Lihat Lokasi"
+    }
+  },
+  "location": {
+    "title": "Lokasi Kami",
+    "subtitle": "Temukan Lokasi Strategis PT. Yoga Wibawa Mandiri",
+    "factory": {
+      "title": "Pabrik",
+      "highlight": "Pengantongan",
+      "description": "Berlokasi strategis di Pelabuhan Krueng Geukueh, Lhokseumawe untuk kemudahan akses distribusi",
+      "address_title": "Alamat Lengkap",
+      "address": "Pelabuhan Krueng Geukueh\nLhokseumawe, Aceh 24352\nIndonesia",
+      "transport_title": "Akses Transportasi",
+      "transport": "• 15 menit dari Bandara Malikussaleh\n• 20 menit dari pusat kota Lhokseumawe\n• Akses langsung ke pelabuhan",
+      "hours_title": "Jam Operasional",
+      "hours": "Senin - Jumat: 08:00 - 17:00 WIB\nSabtu: 08:00 - 12:00 WIB\nMinggu: Tutup"
+    },
+    "office": {
+      "title": "Kantor Pusat",
+      "address_title": "Alamat Kantor",
+      "address": "Jl. Gatot Subroto No. 123\nMedan, Sumatera Utara 20112\nIndonesia",
+      "contact_title": "Kontak",
+      "contact": "Telepon: +62 61 456789\nFax: +62 61 456790\nEmail: info@ywm.co.id",
+      "hours_title": "Jam Kerja",
+      "hours": "Senin - Jumat: 08:00 - 17:00 WIB\nSabtu: 08:00 - 12:00 WIB\nMinggu: Tutup"
+    },
+    "distribution": {
+      "title": "Area",
+      "highlight": "Distribusi",
+      "description": "Jangkauan distribusi kami meliputi seluruh wilayah Aceh dan Sumatera Utara"
+    },
+    "visit_cta": {
+      "title": "Ingin Mengunjungi Fasilitas Kami?",
+      "description": "Hubungi kami terlebih dahulu untuk mengatur jadwal kunjungan dan tour fasilitas",
+      "contact": "Hubungi Kami"
+    }
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba Lagi",
+    "close": "Tutup",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "view": "Lihat",
+    "search": "Cari",
+    "filter": "Filter",
+    "sort": "Urutkan",
+    "download": "Unduh",
+    "upload": "Unggah",
+    "send": "Kirim",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "previous": "Sebelumnya",
+    "submit": "Submit",
+    "reset": "Reset"
+  },
+  "footer": {
+    "company_description": "Perusahaan pengantongan Semen Padang terpercaya di Lhokseumawe dengan fasilitas modern dan distribusi yang luas di seluruh Aceh dan Sumatera Utara.",
+    "partner_text": "Mitra Resmi Semen Padang",
+    "ai_powered": "AI-Powered Website",
+    "ai_subtitle": "JS Puter AI - Local Processing",
+    "navigation": "Navigasi",
+    "contact_us": "Kontak Kami",
+    "head_office": "Kantor Pusat:",
+    "factory": "Pabrik:",
+    "copyright": "© 2024 PT. Yoga Wibawa Mandiri. Semua hak cipta dilindungi.",
+    "developed_by": "Developed with ❤️ by",
+    "technical_engineer": "Technical Engineer",
+    "powered_by": "🤖 Powered by JS Puter AI | 🚀 React + TypeScript"
+  },
+  "theme": {
+    "light": "Mode Terang",
+    "dark": "Mode Gelap",
+    "toggle": "Ganti Tema"
+  },
+  "language": {
+    "indonesian": "Bahasa Indonesia",
+    "english": "English",
+    "toggle": "Ganti Bahasa"
+  }
+}

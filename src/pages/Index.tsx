@@ -1,8 +1,11 @@
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, Truck, Award, Users, Bot, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t } = useTranslation();
+  
   return (
     <Layout>
       {/* Hero Section */}
@@ -18,11 +21,11 @@ const Index = () => {
         
         <div className="relative z-10 text-center text-white px-4 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            PT. Yoga Wibawa <span className="text-yellow-400">Mandiri</span>
+            {t('home.title').split(' ').slice(0, -1).join(' ')} <span className="text-yellow-400">{t('home.title').split(' ').slice(-1)}</span>
           </h1>
           <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto leading-relaxed">
-            Pengantongan Semen Padang Terpercaya di Lhokseumawe
-            <br />dengan Teknologi Modern dan Kualitas Terjamin
+            {t('home.subtitle')}
+            <br />{t('home.description')}
           </p>
           
           {/* AI Badge */}
@@ -37,21 +40,14 @@ const Index = () => {
               to="/layanan" 
               className="bg-ywm-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center"
             >
-              Lihat Layanan Kami
+              {t('home.cta.services')}
               <ArrowRight className="ml-2" size={20} />
-            </Link>
-            <Link 
-              to="/dashboard" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center"
-            >
-              <Bot className="mr-2" size={20} />
-              AI Dashboard
             </Link>
             <Link 
               to="/kontak" 
               className="border-2 border-white text-white hover:bg-white hover:text-ywm-red px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105"
             >
-              Hubungi Kami
+              {t('home.cta.contact')}
             </Link>
           </div>
         </div>

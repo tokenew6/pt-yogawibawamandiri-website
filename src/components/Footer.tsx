@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Code } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const navigationItems = [

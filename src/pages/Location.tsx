@@ -27,18 +27,32 @@ const Location = () => {
             </p>
           </div>
 
-          {/* Google Maps Embed */}
+          {/* Google Maps Embed - Coordinates: 5°14'36.4"N 97°02'27.0"E */}
           <div className="rounded-lg overflow-hidden shadow-2xl mb-12">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127414.36341234567!2d97.1234567!3d5.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPelabuhan%20Krueng%20Geukueh!5e0!3m2!1sen!2sid!4v1234567890123"
+              src="https://maps.app.goo.gl/LBuE5Yvb17q2sPak7"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Lokasi PT. Yoga Wibawa Mandiri"
+              title="Lokasi PT. Yoga Wibawa Mandiri - Pelabuhan Krueng Geukueh"
             ></iframe>
+          </div>
+          
+          {/* Coordinates Display */}
+          <div className="text-center mb-8">
+            <p className="text-lg font-semibold text-ywm-dark dark:text-white mb-2">Koordinat GPS:</p>
+            <p className="text-ywm-red font-mono text-xl">5°14'36.4"N 97°02'27.0"E</p>
+            <a 
+              href="https://maps.app.goo.gl/LBuE5Yvb17q2sPak7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            >
+              Buka di Google Maps →
+            </a>
           </div>
 
           {/* Location Details */}
