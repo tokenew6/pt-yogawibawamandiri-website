@@ -19,19 +19,19 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo PT. YWM */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
+              src="/ywm-logo-transparent.svg" 
               alt="PT. Yoga Wibawa Mandiri Logo"
-              className="w-16 h-16 rounded-xl shadow-lg"
+              className="w-16 h-16 drop-shadow-lg"
             />
             <div className="ml-4">
-              <h1 className="text-ywm-dark font-bold text-xl">PT. Yoga Wibawa Mandiri</h1>
-              <p className="text-gray-600 text-sm">Pengantongan Semen Padang Lhokseumawe</p>
+              <h1 className="text-ywm-dark font-bold text-xl drop-shadow-sm">PT. Yoga Wibawa Mandiri</h1>
+              <p className="text-gray-700 text-sm font-medium drop-shadow-sm">Pengantongan Semen Padang Lhokseumawe</p>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-all duration-300 hover:text-ywm-red transform hover:scale-105 ${
+                className={`font-semibold transition-all duration-300 hover:text-ywm-red transform hover:scale-105 drop-shadow-sm ${
                   isActive(item.path) ? 'text-ywm-red border-b-2 border-ywm-red pb-1' : 'text-ywm-dark'
                 }`}
               >
@@ -53,13 +53,13 @@ const Header = () => {
           {/* Logo Semen Padang */}
           <div className="hidden lg:flex items-center">
             <img 
-              src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+              src="/semen-padang-logo-transparent.svg" 
               alt="Semen Padang Logo"
-              className="w-16 h-16 rounded-xl shadow-lg mr-4"
+              className="w-16 h-16 drop-shadow-lg mr-4"
             />
             <div>
-              <p className="text-ywm-dark font-bold text-lg">Semen Padang</p>
-              <p className="text-gray-600 text-sm">Mitra Resmi</p>
+              <p className="text-ywm-dark font-bold text-lg drop-shadow-sm">Semen Padang</p>
+              <p className="text-gray-700 text-sm font-medium drop-shadow-sm">Mitra Resmi</p>
             </div>
           </div>
 
@@ -68,19 +68,19 @@ const Header = () => {
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} className="text-ywm-dark" /> : <Menu size={24} className="text-ywm-dark" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="lg:hidden pb-4 animate-fade-in">
-            <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 space-y-2 shadow-lg border border-gray-200">
               {navigationItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`block py-3 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-ywm-red hover:text-white ${
+                  className={`block py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:bg-ywm-red hover:text-white ${
                     isActive(item.path) ? 'bg-ywm-red text-white' : 'text-ywm-dark hover:pl-6'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -91,13 +91,13 @@ const Header = () => {
               {/* Mobile Logo Semen Padang */}
               <div className="flex items-center justify-center pt-4 border-t border-gray-200">
                 <img 
-                  src="/lovable-uploads/35616003-ad4f-4d69-940c-91a3a5a41f07.png" 
+                  src="/semen-padang-logo-transparent.svg" 
                   alt="Semen Padang Logo"
-                  className="w-12 h-12 rounded-lg mr-3"
+                  className="w-12 h-12 mr-3 drop-shadow-lg"
                 />
                 <div>
-                  <p className="text-ywm-dark font-semibold text-sm">Semen Padang</p>
-                  <p className="text-gray-600 text-xs">Mitra Resmi</p>
+                  <p className="text-ywm-dark font-semibold text-sm drop-shadow-sm">Semen Padang</p>
+                  <p className="text-gray-700 text-xs font-medium drop-shadow-sm">Mitra Resmi</p>
                 </div>
               </div>
             </div>

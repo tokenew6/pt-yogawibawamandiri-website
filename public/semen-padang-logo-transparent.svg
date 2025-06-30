@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#dc2626" stroke="#1f2937" stroke-width="3"/>
+  <circle cx="100" cy="100" r="70" fill="white"/>
+  <path d="M70 120 Q85 100 100 100 Q115 100 130 120 Q125 110 120 105 L115 100 Q110 95 100 95 Q90 95 85 100 L80 105 Q75 110 70 120 Z" fill="#1f2937"/>
+  <path d="M85 100 L80 85 L82 84 L87 98 Z" fill="#1f2937"/>
+  <path d="M115 100 L120 85 L118 84 L113 98 Z" fill="#1f2937"/>
+  <text x="50" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">PADANG</text>
+  <text x="105" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">CEMENT</text>
+  <text x="50" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">INDONESIA</text>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="10" font-style="italic" fill="#1f2937">Sejak 1910</text>
+</svg>
