@@ -37,6 +37,11 @@ export interface OrderEmailData {
   notes?: string;
 }
 
+// Legacy function for backward compatibility
+export const sendContactEmail = async (data: ContactFormData): Promise<boolean> => {
+  return EmailService.sendContactForm(data);
+};
+
 export class EmailService {
   // Send contact form email
   static async sendContactForm(data: ContactFormData): Promise<boolean> {
