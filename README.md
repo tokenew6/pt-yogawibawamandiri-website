@@ -1,263 +1,301 @@
-# PT. Yoga Wibawa Mandiri - AI-Powered Website (Dalam Pengembangan)
+# PT. Yoga Wibawa Mandiri - AI-Powered Website & CMS
 
-**Pengantongan Semen Padang Lhokseumawe dengan Teknologi AI Modern**
+![PT. YWM Logo](public/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png)
 
-![PT. Yoga Wibawa Mandiri](https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
+## 🌟 Overview
 
-## 🏭 Tentang Perusahaan
+Modern fullstack website dan content management system untuk PT. Yoga Wibawa Mandiri - perusahaan pengantongan semen terkemuka di Lhokseumawe, Aceh. Website ini dibangun dengan teknologi React + TailwindCSS + Supabase dan dilengkapi dengan AI Assistant menggunakan JS Puter.
 
-PT. Yoga Wibawa Mandiri adalah perusahaan pengantongan Semen Padang terpercaya yang berlokasi strategis di Pelabuhan Krueng Geukueh, Lhokseumawe, Aceh. Dengan teknologi modern dan komitmen terhadap kualitas, kami melayani kebutuhan konstruksi di seluruh wilayah Aceh dan Sumatera Utara.
+## ✨ Features
 
-## 🚀 Fitur Website AI-Powered
+### 🌐 Public Website
+- **Modern Landing Page** dengan hero section yang menarik
+- **Company Profile** lengkap dengan visi, misi, dan sejarah
+- **Services Showcase** dengan detail layanan pengantongan semen
+- **Project Gallery** dengan filter dan kategorisasi
+- **Blog/Article System** dengan SEO-friendly URLs
+- **Contact Forms** terintegrasi dengan Google Maps
+- **Responsive Design** mobile-first approach
 
-### ✨ JS Puter AI Integration
-- **🤖 Intelligent Chatbot** - Customer service otomatis 24/7
-- **🧠 Local AI Processing** - Tidak memerlukan API eksternal
-- **📊 AI Dashboard** - Monitoring dan analytics real-time
-- **🔒 Privacy First** - Semua data diproses lokal di browser
-- **⚡ Instant Response** - Tanpa delay network
+### 🤖 AI-Powered Features  
+- **JS Puter AI Assistant** - Customer service 24/7
+- **AI Content Generator** - Otomatis generate artikel
+- **Smart FAQ** - Jawaban otomatis untuk pertanyaan umum
+- **AI-Enhanced Search** - Pencarian konten yang cerdas
 
-### 🌟 Fitur Utama Website
-- **📱 Responsive Design** - Optimal di semua perangkat
-- **🎨 Modern UI/UX** - Design premium dengan animasi smooth
-- **📍 Interactive Maps** - Lokasi pabrik dan area distribusi
-- **📸 Gallery** - Dokumentasi fasilitas dan kegiatan
-- **📞 Contact System** - Form kontak terintegrasi
-- **🏢 Company Profile** - Informasi lengkap perusahaan
+### 🔐 Authentication & Authorization
+- **Role-based Access Control** (Admin, Editor, Viewer, Client)
+- **Supabase Auth** dengan email/password
+- **Protected Routes** untuk area admin
+- **User Profile Management**
 
-## 🛠️ Teknologi yang Digunakan
+### 📊 Admin Dashboard
+- **Content Management** - CRUD artikel, proyek, layanan
+- **File Manager** - Upload dan kelola media
+- **User Management** - Kelola pengguna dan role
+- **Analytics Dashboard** - Statistik website
+- **AI Tools Integration** - Generate konten dengan AI
 
-### Frontend Stack
-- **React 18** - Modern JavaScript framework
-- **TypeScript** - Type-safe development
-- **Vite** - Fast build tool dan dev server
-- **Tailwind CSS** - Utility-first CSS framework
-- **Shadcn/UI** - High-quality component library
+### 🚀 Technical Features
+- **PWA Support** - Install ke mobile device
+- **SEO Optimized** - Meta tags, sitemap, structured data
+- **Dark Mode** - Theme switching
+- **Performance Optimized** - Lazy loading, code splitting
+- **Real-time Updates** - Supabase real-time subscriptions
 
-### AI & Automation
-- **JS Puter AI** - Local AI processing engine
-- **Natural Language Processing** - Pemahaman bahasa alami
-- **Pattern Recognition** - Analisis intent pengguna
-- **Knowledge Base Management** - Sistem manajemen pengetahuan
-- **Real-time Analytics** - Monitoring performa AI
+## 🛠️ Tech Stack
 
-### Additional Libraries
+### Frontend
+- **React 18** - UI Library
+- **TypeScript** - Type safety
+- **Vite** - Build tool & dev server
+- **TailwindCSS** - Styling framework
+- **Shadcn/ui** - Component library
 - **React Router** - Client-side routing
-- **Lucide React** - Beautiful icons
-- **React Hook Form** - Form management
-- **Sonner** - Toast notifications
-- **React Query** - Data fetching dan caching
+- **TanStack Query** - Server state management
+
+### Backend & Database
+- **Supabase** - Backend-as-a-Service
+- **PostgreSQL** - Database
+- **Supabase Auth** - Authentication
+- **Supabase Storage** - File storage
+- **Row Level Security** - Data protection
+
+### AI & External Services
+- **JS Puter** - AI Assistant platform
+- **EmailJS** - Contact form emails
+- **Google Maps** - Location embedding
+
+### Deployment
+- **Netlify** - Static site hosting
+- **Supabase Cloud** - Backend hosting
+- **Custom Domain** - Professional URL
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
 - npm atau yarn
+- Akun Supabase
+- Akun Netlify (untuk deployment)
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/jakForever/pt-yogawibawamandiri-website.git
+cd pt-yogawibawamandiri-website
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Setup Environment Variables
+```bash
+cp .env.example .env
+```
+
+Edit `.env` file dengan konfigurasi Anda:
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+VITE_JSPUTER_API_KEY=your-jsputer-api-key
+```
+
+### 4. Setup Database
+Jalankan SQL scripts di Supabase:
+```bash
+# Import database schema
+psql -h your-db-host -U postgres -d postgres -f supabase/schema.sql
+```
+
+### 5. Start Development Server
+```bash
+npm run dev
+```
+
+Website akan berjalan di `http://localhost:5173`
+
+## 📊 Database Schema
+
+### Tables
+- **profiles** - User profiles dan roles
+- **articles** - Blog articles dan content
+- **projects** - Company projects portfolio  
+- **services** - Services offered
+- **files** - File storage metadata
+- **site_settings** - Website configuration
+
+### Row Level Security (RLS)
+- Users hanya bisa akses data sesuai role
+- Public data tersedia tanpa auth
+- Admin memiliki akses penuh
+
+## 🔑 User Roles
+
+| Role | Permissions |
+|------|-------------|
+| **Admin** | Full access - kelola semua content dan users |
+| **Editor** | Create/edit articles, projects, services |
+| **Viewer** | Read-only access ke dashboard |
+| **Client** | Limited access untuk klien perusahaan |
+
+## 🤖 AI Assistant Integration
+
+### JS Puter Setup
+```javascript
+// Automatic initialization
+const aiAssistant = new JSPuterBot({
+  apiKey: "your-api-key",
+  theme: "auto",
+  greeting: "Halo! Saya Asisten AI PT. YWM",
+  position: "bottom-right",
+  context: "PT. Yoga Wibawa Mandiri company info..."
+});
+```
+
+### AI Features
+- **Customer Support** - 24/7 automated responses
+- **Content Generation** - AI-powered article creation
+- **Smart Search** - Intelligent content discovery
+- **FAQ Automation** - Instant answers to common questions
+
+## 📱 PWA Features
 
 ### Installation
+Website dapat di-install sebagai aplikasi mobile:
+- **Android** - "Add to Home Screen"
+- **iOS** - "Add to Home Screen" 
+- **Desktop** - Install prompt otomatis
 
+### Offline Support
+- **Service Worker** - Cache static assets
+- **Offline Pages** - Basic functionality tanpa internet
+- **Background Sync** - Sync data saat online kembali
+
+## 🔧 Development
+
+### Available Scripts
 ```bash
-# Clone repository
-git clone <repository-url>
-cd pt-yoga-wibawa-mandiri
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
 ```
 
-### Environment Setup
-```bash
-# Copy environment file
-cp .env.example .env
-
-# Edit environment variables
-# (Tidak diperlukan untuk JS Puter AI - berjalan 100% lokal)
-```
-
-## 📁 Struktur Proyek
-
+### Project Structure
 ```
 src/
-├── components/          # Reusable components
-│   ├── ui/             # Shadcn/UI components
-│   ├── Header.tsx      # Navigation header
+├── components/          # Reusable UI components
+│   ├── ui/             # Shadcn/ui components
+│   ├── Header.tsx      # Site header
 │   ├── Footer.tsx      # Site footer
-│   ├── Layout.tsx      # Page layout wrapper
-│   ├── JSPuterChatBot.tsx    # AI Chatbot component
-│   └── JSPuterDashboard.tsx  # AI Dashboard
+│   └── JSPuterAI.tsx   # AI assistant
 ├── pages/              # Page components
+│   ├── dashboard/      # Admin dashboard pages
 │   ├── Index.tsx       # Homepage
-│   ├── About.tsx       # Tentang kami
-│   ├── Services.tsx    # Layanan
-│   ├── Gallery.tsx     # Galeri
-│   ├── Location.tsx    # Lokasi
-│   ├── Contact.tsx     # Kontak
-│   └── Dashboard.tsx   # AI Dashboard
-├── lib/                # Utility libraries
-│   ├── utils.ts        # Helper functions
-│   └── jsputer-ai.ts   # JS Puter AI engine
-├── hooks/              # Custom React hooks
-└── styles/             # Global styles
+│   └── ...
+├── contexts/           # React contexts
+│   └── AuthContext.tsx # Authentication state
+├── lib/                # Utilities
+│   ├── supabase.ts     # Supabase client
+│   └── utils.ts        # Helper functions
+└── hooks/              # Custom React hooks
 ```
 
-## 🤖 JS Puter AI Features
+## 🚀 Deployment
 
-### Intelligent Chatbot
-- **Natural Language Understanding** - Memahami pertanyaan dalam bahasa Indonesia
-- **Context Awareness** - Mengingat konteks percakapan
-- **Knowledge Base** - Database pengetahuan lengkap tentang perusahaan
-- **FAQ System** - Jawaban otomatis untuk pertanyaan umum
-- **Confidence Scoring** - Tingkat kepercayaan respons AI
+### Netlify Deployment
 
-### AI Dashboard
-- **Performance Monitoring** - Metrik performa chatbot
-- **Conversation Analytics** - Analisis percakapan pengguna
-- **Knowledge Management** - Kelola database pengetahuan
-- **System Configuration** - Pengaturan sistem AI
-- **Real-time Insights** - Wawasan real-time
+1. **Build Settings**:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
 
-### Privacy & Security
-- **100% Local Processing** - Data tidak pernah meninggalkan browser
-- **No API Dependencies** - Tidak memerlukan koneksi ke server AI
-- **GDPR Compliant** - Sesuai standar privasi data
-- **Secure by Design** - Keamanan built-in
+2. **Environment Variables**:
+   Set di Netlify dashboard:
+   ```
+   VITE_SUPABASE_URL=your-supabase-url
+   VITE_SUPABASE_ANON_KEY=your-anon-key
+   ```
 
-## 📊 Performance
+3. **Redirects**:
+   File `_redirects` sudah dikonfigurasi untuk SPA routing
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Core Web Vitals**: Excellent
-- **AI Response Time**: < 100ms (local processing)
-- **Bundle Size**: Optimized untuk fast loading
+### Domain Setup
+- **Custom Domain**: `yogawibawamandiri.com`
+- **SSL Certificate**: Auto-provisioned oleh Netlify
+- **CDN**: Global distribution untuk performa optimal
 
-## 🌐 Deployment
+## 📈 Performance
 
-### Netlify (Recommended)
-```bash
-# Build project
-npm run build
+### Optimizations
+- **Code Splitting** - Lazy load pages
+- **Image Optimization** - WebP format, lazy loading
+- **Bundle Analysis** - Minimal dependency size
+- **Caching Strategy** - Browser dan CDN caching
 
-# Deploy to Netlify
-# Upload dist/ folder atau connect Git repository
-```
+### Metrics Target
+- **Lighthouse Score**: 90+ semua kategori
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
 
-### Vercel
-```bash
-# Install Vercel CLI
-npm i -g vercel
+## 🔒 Security
 
-# Deploy
-vercel --prod
-```
+### Best Practices
+- **Environment Variables** - Sensitive data protection
+- **Row Level Security** - Database access control
+- **HTTPS Everywhere** - Encrypted connections
+- **CORS Configuration** - Secure API access
+- **Input Validation** - XSS dan injection protection
 
-### Manual Deployment
-```bash
-# Build project
-npm run build
+## 📝 Content Management
 
-# Upload dist/ folder ke web server
-```
+### Article Creation
+1. **Manual Writing** - Rich text editor
+2. **AI Generation** - Automated content creation
+3. **SEO Optimization** - Meta tags, structured data
+4. **Media Management** - Image upload dan optimization
 
-## 🔧 Customization
-
-### Mengubah Konten AI
-Edit file `src/lib/jsputer-ai.ts` untuk:
-- Menambah FAQ baru
-- Mengubah respons chatbot
-- Menambah pengetahuan perusahaan
-- Kustomisasi personality AI
-
-### Styling
-- Edit `tailwind.config.ts` untuk theme customization
-- Modify `src/index.css` untuk global styles
-- Update component styles di masing-masing file
-
-### Adding New Features
-1. Buat component baru di `src/components/`
-2. Tambah route di `src/App.tsx`
-3. Update navigation di `src/components/Header.tsx`
-
-## 📈 Analytics & Monitoring
-
-Website dilengkapi dengan:
-- **AI Performance Metrics** - Monitoring performa chatbot
-- **User Interaction Analytics** - Analisis interaksi pengguna
-- **Conversation Insights** - Wawasan dari percakapan
-- **System Health Monitoring** - Monitoring kesehatan sistem
-
-## 🤝 Contributing
-
-1. Fork repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🏢 Company Information
-
-**PT. Yoga Wibawa Mandiri**
-- **Alamat Pabrik**: Pelabuhan Krueng Geukueh, Lhokseumawe, Aceh 24352
-- **Kantor Pusat**: Medan, Sumatera Utara
-- **Telepon**: +62 651 123456
-- **Email**: info@ywm.co.id
-- **Website**: https://ywm.co.id
-
-### Layanan Utama
-- ✅ Pengantongan Semen Padang
-- ✅ Distribusi Regional Aceh & Sumut
-- ✅ Layanan Teknis & Konsultasi
-- ✅ Quality Assurance & Control
-
-## 👨‍💻 Developer & Credits
-
-**Dibuat oleh:**
-**Mulky Malikul Dhaher**
-*Teknis PT. Yoga Wibawa Mandiri*
-
-- 🔧 **Role**: Lead Developer & AI Integration Specialist
-- 🏢 **Company**: PT. Yoga Wibawa Mandiri
-- 💼 **Position**: Technical Engineer
-- 🌐 **Expertise**: Full-stack Development, AI Integration, Modern Web Technologies
-
-### Development Credits
-- **Frontend Development**: React + TypeScript + Tailwind CSS
-- **AI Integration**: JS Puter AI - Local AI Processing
-- **UI/UX Design**: Modern responsive design with premium aesthetics
-- **Performance Optimization**: Lighthouse 95+ score achievement
-- **SEO Optimization**: Complete meta tags and structured data
-
-### Special Thanks
-- **Semen Padang** - Untuk kemitraan strategis
-- **PT. Yoga Wibawa Mandiri Management** - Untuk dukungan pengembangan
-- **Open Source Community** - Untuk tools dan libraries yang digunakan
-
----
-
-**© 2024 PT. Yoga Wibawa Mandiri. All rights reserved.**
-
-*Developed with ❤️ by Mulky Malikul Dhaher - Technical Engineer PT. Yoga Wibawa Mandiri*
-
----
+### Project Portfolio
+- **Image Galleries** - Multiple image support
+- **Categorization** - Filter by project type
+- **Status Tracking** - Completed/Ongoing/Planned
+- **Client Information** - Project details
 
 ## 📞 Support & Contact
 
-Untuk pertanyaan teknis atau support:
-- **Developer**: Mulky Malikul Dhaher
-- **Email**: mulkymalikuldhaher@mail.com
-- **Phone**: +62 xxx xxxx xxxx
+### Developer
+- **Name**: Mulky Malikul Dhaher
+- **Role**: Technical Engineer
+- **Company**: PT. Yoga Wibawa Mandiri
+- **Email**: mulky@yogawibawamandiri.com
 
-Untuk informasi bisnis:
-- **Email**: info@ywm.co.id
-- **Phone**: +62 651 123456
+### Company Information
+- **Website**: https://yogawibawamandiri.com
+- **Email**: info@yogawibawamandiri.com
+- **Address**: Pelabuhan Krueng Geukueh, Lhokseumawe, Aceh
+- **Phone**: +62-xxx-xxxx-xxxx
+
+## 📄 License
+
+Copyright © 2024 PT. Yoga Wibawa Mandiri. All rights reserved.
+
+This project is proprietary software developed for PT. Yoga Wibawa Mandiri.
+
+---
+
+## 🔄 Changelog
+
+### v1.0.0 (2024-06-30)
+- ✅ Initial release
+- ✅ Full-stack CMS implementation
+- ✅ JS Puter AI integration
+- ✅ Supabase backend setup
+- ✅ Admin dashboard
+- ✅ PWA support
+- ✅ Netlify deployment ready
+
+---
+
+**Built with ❤️ for PT. Yoga Wibawa Mandiri**

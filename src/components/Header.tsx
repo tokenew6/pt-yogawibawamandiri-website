@@ -12,6 +12,7 @@ const Header = () => {
     { name: 'Tentang Kami', path: '/tentang' },
     { name: 'Layanan', path: '/layanan' },
     { name: 'Galeri', path: '/galeri' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Lokasi', path: '/lokasi' },
     { name: 'Kontak', path: '/kontak' },
   ];
