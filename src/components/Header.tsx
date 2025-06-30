@@ -29,13 +29,13 @@ const Header = () => {
           {/* Logo PT. YWM */}
           <div className="flex items-center">
             <img 
-              src="/ywm-logo-transparent.svg" 
+              src="/ywm-logo-new.svg" 
               alt="PT. Yoga Wibawa Mandiri Logo"
               className="w-16 h-16 drop-shadow-lg"
             />
             <div className="ml-4">
-              <h1 className="text-ywm-dark font-bold text-xl drop-shadow-sm">PT. Yoga Wibawa Mandiri</h1>
-              <p className="text-gray-700 text-sm font-medium drop-shadow-sm">Pengantongan Semen Padang Lhokseumawe</p>
+              <h1 className="text-ywm-dark dark:text-white font-bold text-xl drop-shadow-sm">PT. Yoga Wibawa Mandiri</h1>
+              <p className="text-gray-700 dark:text-gray-300 text-sm font-medium drop-shadow-sm">Pengantongan Semen Padang Lhokseumawe</p>
             </div>
           </div>
 

@@ -141,8 +141,8 @@ self.addEventListener('push', (event) => {
   
   const options = {
     body: event.data ? event.data.text() : 'Pesan baru dari PT. Yoga Wibawa Mandiri',
-    icon: '/ywm-logo-transparent.svg',
-    badge: '/ywm-logo-transparent.svg',
+    icon: '/ywm-logo-new.svg',
+    badge: '/ywm-logo-new.svg',
     vibrate: [200, 100, 200],
     data: {
       url: '/'

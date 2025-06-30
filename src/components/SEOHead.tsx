@@ -39,7 +39,7 @@ const SEOHead = ({
     ? 'cement bagging, Lhokseumawe, Aceh, Semen Padang, distribution, construction materials, cement supplier, bagging services, North Sumatra'
     : 'pengantongan semen, Lhokseumawe, Aceh, Semen Padang, distribusi, bahan konstruksi, supplier semen, layanan pengantongan, Sumatera Utara';
     
-  const defaultImage = `${baseUrl}/ywm-logo-transparent.svg`;
+  const defaultImage = `${baseUrl}/ywm-logo-new.svg`;
 
   const finalTitle = title ? `${title} | PT. Yoga Wibawa Mandiri` : defaultTitle;
   const finalDescription = description || defaultDescription;

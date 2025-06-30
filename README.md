@@ -1,6 +1,14 @@
 # PT. Yoga Wibawa Mandiri - Modern Corporate Website
 
-![PT. YWM Logo](public/ywm-logo-transparent.svg)
+<div align="center">
+  <img src="public/ywm-logo-new.svg" alt="PT. Yoga Wibawa Mandiri Logo" width="200" height="200"/>
+  
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site/deploys)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen)](https://nodejs.org/)
+  [![React](https://img.shields.io/badge/React-18.3.1-blue)](https://reactjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)](https://www.typescriptlang.org/)
+</div>
 
 ## 🌟 Overview
 
