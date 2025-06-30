@@ -2,12 +2,27 @@ import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, Truck, Award, Users, Bot, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SEOHead, { pageSEO } from '@/components/SEOHead';
+import { trackEvent } from '@/components/GoogleAnalytics';
 
 const Index = () => {
   const { t } = useTranslation();
   
+  const handleCTAClick = (action: string) => {
+    trackEvent('cta_click', {
+      event_category: 'engagement',
+      event_label: action,
+      page: 'home'
+    });
+  };
+  
   return (
     <Layout>
+      <SEOHead 
+        title={pageSEO.home[t.language as 'id' | 'en']?.title}
+        description={pageSEO.home[t.language as 'id' | 'en']?.description}
+        keywords={pageSEO.home[t.language as 'id' | 'en']?.keywords}
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-ywm-red via-red-700 to-red-900">
         <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -39,6 +54,7 @@ const Index = () => {
             <Link 
               to="/layanan" 
               className="bg-ywm-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 flex items-center justify-center"
+              onClick={() => handleCTAClick('view_services')}
             >
               {t('home.cta.services')}
               <ArrowRight className="ml-2" size={20} />
@@ -46,6 +62,7 @@ const Index = () => {
             <Link 
               to="/kontak" 
               className="border-2 border-white text-white hover:bg-white hover:text-ywm-red px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105"
+              onClick={() => handleCTAClick('contact_us')}
             >
               {t('home.cta.contact')}
             </Link>

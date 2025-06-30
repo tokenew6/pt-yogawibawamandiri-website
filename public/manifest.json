@@ -1,0 +1,95 @@
+{
+  "name": "PT. Yoga Wibawa Mandiri",
+  "short_name": "PT. YWM",
+  "description": "Pengantongan Semen Padang Terpercaya di Lhokseumawe - Solusi lengkap untuk kebutuhan konstruksi Anda",
+  "theme_color": "#C62828",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/ywm-logo-transparent.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/ywm-logo-transparent.svg", 
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile-home.png", 
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sistem Pemesanan",
+      "short_name": "Order",
+      "description": "Buat pesanan semen secara online",
+      "url": "/order",
+      "icons": [
+        {
+          "src": "/icons/order-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Kontak Kami",
+      "short_name": "Kontak",
+      "description": "Hubungi tim customer service",
+      "url": "/kontak",
+      "icons": [
+        {
+          "src": "/icons/contact-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Lokasi Pabrik",
+      "short_name": "Lokasi", 
+      "description": "Lihat lokasi pabrik dan area distribusi",
+      "url": "/lokasi",
+      "icons": [
+        {
+          "src": "/icons/location-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://yogawibawamandiri.com/manifest.json"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
