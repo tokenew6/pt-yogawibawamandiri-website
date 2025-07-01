@@ -27,17 +27,18 @@ const Location = () => {
             </p>
           </div>
 
-          {/* Google Maps Embed - Coordinates: 5°14'36.4"N 97°02'27.0"E */}
-          <div className="rounded-lg overflow-hidden shadow-2xl mb-12">
+          {/* Interactive Google Maps Embed - Pelabuhan Krueng Geukueh, Lhokseumawe */}
+          <div className="rounded-2xl overflow-hidden shadow-2xl mb-12 border-4 border-white/50 dark:border-gray-700/50">
             <iframe
-              src="https://maps.app.goo.gl/LBuE5Yvb17q2sPak7"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15869.047234567891!2d97.03!3d5.244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304738c8dc4b0c0d%3A0x123456789abcdef!2sPelabuhan%20Krueng%20Geukueh%2C%20Lhokseumawe%2C%20Aceh!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
               width="100%"
-              height="400"
+              height="450"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Lokasi PT. Yoga Wibawa Mandiri - Pelabuhan Krueng Geukueh"
+              className="w-full h-[450px] transition-all duration-300 hover:scale-[1.01]"
             ></iframe>
           </div>
           
