@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Code } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const navigationItems = [
@@ -19,9 +20,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/5f8e0e82-2031-4a9f-b848-f05d23c37cf2.png" 
+                src="/ywm-logo-new.svg" 
                 alt="PT. Yoga Wibawa Mandiri Logo"
-                className="w-14 h-14 rounded-xl shadow-lg mr-4"
+                className="w-14 h-14 shadow-lg mr-4"
               />
               <div>
                 <h3 className="font-bold text-xl">PT. Yoga Wibawa Mandiri</h3>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - PT. Yoga Wibawa Mandiri</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #C62828 0%, #8E0000 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #C62828;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .retry-btn {
+            background: white;
+            color: #C62828;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+        }
+        
+        .retry-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .home-btn {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .home-btn:hover {
+            background: white;
+            color: #C62828;
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .retry-btn, .home-btn {
+                display: block;
+                margin: 10px auto;
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="offline-icon pulse">📡</div>
+        
+        <div class="logo">YWM</div>
+        
+        <h1 id="title">Tidak Ada Koneksi Internet</h1>
+        
+        <p id="description">
+            Maaf, Anda sedang offline. Pastikan koneksi internet Anda aktif untuk mengakses layanan PT. Yoga Wibawa Mandiri.
+        </p>
+        
+        <button class="retry-btn" onclick="checkConnection()" id="retryBtn">
+            Coba Lagi
+        </button>
+        
+        <a href="/" class="home-btn" id="homeBtn">Ke Beranda</a>
+        
+        <div class="status" id="status">
+            <strong>Status:</strong> Offline
+        </div>
+    </div>
+
+    <script>
+        function detectLanguage() {
+            const lang = navigator.language || navigator.userLanguage;
+            return lang.startsWith('en') ? 'en' : 'id';
+        }
+
+        function setLanguage() {
+            const lang = detectLanguage();
+            
+            if (lang === 'en') {
+                document.getElementById('title').textContent = 'No Internet Connection';
+                document.getElementById('description').textContent = 'Sorry, you are currently offline. Please ensure your internet connection is active to access PT. Yoga Wibawa Mandiri services.';
+                document.getElementById('retryBtn').textContent = 'Try Again';
+                document.getElementById('homeBtn').textContent = 'Go Home';
+                document.getElementById('status').innerHTML = '<strong>Status:</strong> Offline';
+            }
+        }
+
+        function checkConnection() {
+            const retryBtn = document.getElementById('retryBtn');
+            const status = document.getElementById('status');
+            
+            retryBtn.textContent = detectLanguage() === 'en' ? 'Checking...' : 'Memeriksa...';
+            retryBtn.disabled = true;
+            
+            fetch('/', { 
+                method: 'HEAD',
+                cache: 'no-cache' 
+            })
+            .then(response => {
+                if (response.ok) {
+                    status.innerHTML = detectLanguage() === 'en' 
+                        ? '<strong>Status:</strong> <span style="color: #4CAF50;">Online - Redirecting...</span>'
+                        : '<strong>Status:</strong> <span style="color: #4CAF50;">Online - Mengarahkan...</span>';
+                    
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(() => {
+                retryBtn.textContent = detectLanguage() === 'en' ? 'Try Again' : 'Coba Lagi';
+                retryBtn.disabled = false;
+                
+                status.innerHTML = detectLanguage() === 'en'
+                    ? '<strong>Status:</strong> <span style="color: #FF5722;">Still Offline</span>'
+                    : '<strong>Status:</strong> <span style="color: #FF5722;">Masih Offline</span>';
+            });
+        }
+
+        window.addEventListener('online', () => {
+            document.getElementById('status').innerHTML = detectLanguage() === 'en'
+                ? '<strong>Status:</strong> <span style="color: #4CAF50;">Back Online - Redirecting...</span>'
+                : '<strong>Status:</strong> <span style="color: #4CAF50;">Kembali Online - Mengarahkan...</span>';
+            
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        });
+
+        window.addEventListener('offline', () => {
+            document.getElementById('status').innerHTML = detectLanguage() === 'en'
+                ? '<strong>Status:</strong> <span style="color: #FF5722;">Connection Lost</span>'
+                : '<strong>Status:</strong> <span style="color: #FF5722;">Koneksi Terputus</span>';
+        });
+
+        setLanguage();
+    </script>
+</body>
+</html>

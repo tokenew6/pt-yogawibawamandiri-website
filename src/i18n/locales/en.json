@@ -1,0 +1,140 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us", 
+    "services": "Services",
+    "gallery": "Gallery",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "PT. Yoga Wibawa Mandiri",
+    "subtitle": "Trusted Cement Bagging Partner in Lhokseumawe",
+    "description": "with Modern Technology and Guaranteed Quality",
+    "cta": {
+      "services": "View Our Services",
+      "contact": "Contact Us"
+    },
+    "stats": {
+      "experience": "Years of Experience",
+      "capacity": "Tons of Cement per Year", 
+      "certification": "Quality Certificate",
+      "ai_service": "Customer Service"
+    },
+    "about_preview": {
+      "title": "About",
+      "highlight": "PT. Yoga Wibawa Mandiri",
+      "description1": "Established as a strategic partner of Semen Padang in Aceh and North Sumatra regions, PT. Yoga Wibawa Mandiri has become a trusted cement bagging company with modern facilities at Krueng Geukueh Port, Lhokseumawe.",
+      "description2": "With our commitment to quality and excellent service, we serve construction needs throughout the region with efficient and timely distribution.",
+      "developer_credit": "This AI-Powered website was developed by:",
+      "developer_name": "Mulky Malikul Dhaher",
+      "developer_title": "Technical Engineer - PT. Yoga Wibawa Mandiri",
+      "read_more": "Read More"
+    },
+    "services_preview": {
+      "title": "Our",
+      "highlight": "Services",
+      "description": "We provide high-quality cement bagging and distribution services with modern technology and international standards.",
+      "bagging": {
+        "title": "Cement Bagging",
+        "description": "Automated bagging process with large capacity and strict quality control to ensure high-quality products."
+      },
+      "distribution": {
+        "title": "Wide Distribution", 
+        "description": "Distribution network covering all of Aceh and North Sumatra with reliable and timely transport fleet."
+      },
+      "ai_service": {
+        "title": "AI Customer Service",
+        "description": "24/7 customer service with local AI technology that provides fast and accurate responses to all your questions."
+      },
+      "view_all": "View All Services"
+    },
+    "cta_section": {
+      "title": "Ready to Partner with Us?",
+      "description": "Contact our team for consultation and the best offer according to your construction project needs.",
+      "contact_now": "Contact Now",
+      "view_location": "View Location"
+    }
+  },
+  "location": {
+    "title": "Our Location",
+    "subtitle": "Find Strategic Locations of PT. Yoga Wibawa Mandiri",
+    "factory": {
+      "title": "Bagging",
+      "highlight": "Factory",
+      "description": "Strategically located at Krueng Geukueh Port, Lhokseumawe for easy distribution access",
+      "address_title": "Complete Address",
+      "address": "Krueng Geukueh Port\nLhokseumawe, Aceh 24352\nIndonesia",
+      "transport_title": "Transportation Access",
+      "transport": "• 15 minutes from Malikussaleh Airport\n• 20 minutes from Lhokseumawe city center\n• Direct access to port",
+      "hours_title": "Operating Hours",
+      "hours": "Monday - Friday: 08:00 - 17:00 WIB\nSaturday: 08:00 - 12:00 WIB\nSunday: Closed"
+    },
+    "office": {
+      "title": "Head Office",
+      "address_title": "Office Address",
+      "address": "Jl. Gatot Subroto No. 123\nMedan, North Sumatra 20112\nIndonesia",
+      "contact_title": "Contact",
+      "contact": "Phone: +62 61 456789\nFax: +62 61 456790\nEmail: info@ywm.co.id",
+      "hours_title": "Working Hours",
+      "hours": "Monday - Friday: 08:00 - 17:00 WIB\nSaturday: 08:00 - 12:00 WIB\nSunday: Closed"
+    },
+    "distribution": {
+      "title": "Distribution",
+      "highlight": "Area",
+      "description": "Our distribution coverage includes all regions of Aceh and North Sumatra"
+    },
+    "visit_cta": {
+      "title": "Want to Visit Our Facilities?",
+      "description": "Contact us first to arrange a visit schedule and facility tour",
+      "contact": "Contact Us"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "download": "Download",
+    "upload": "Upload",
+    "send": "Send",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset"
+  },
+  "footer": {
+    "company_description": "Trusted Semen Padang bagging company in Lhokseumawe with modern facilities and wide distribution throughout Aceh and North Sumatra.",
+    "partner_text": "Official Partner of Semen Padang",
+    "ai_powered": "AI-Powered Website",
+    "ai_subtitle": "JS Puter AI - Local Processing",
+    "navigation": "Navigation",
+    "contact_us": "Contact Us",
+    "head_office": "Head Office:",
+    "factory": "Factory:",
+    "copyright": "© 2024 PT. Yoga Wibawa Mandiri. All rights reserved.",
+    "developed_by": "Developed with ❤️ by",
+    "technical_engineer": "Technical Engineer",
+    "powered_by": "🤖 Powered by JS Puter AI | 🚀 React + TypeScript"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "toggle": "Toggle Theme"
+  },
+  "language": {
+    "indonesian": "Bahasa Indonesia",
+    "english": "English",
+    "toggle": "Switch Language"
+  }
+}

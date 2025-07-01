@@ -3,10 +3,12 @@ import Layout from '@/components/Layout';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail, type ContactFormData } from '@/services/emailService';
+import { useContactForm } from '@/hooks/useSupabase';
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { submitContact, submitting: supabaseSubmitting, success, error: supabaseError, resetForm } = useContactForm();
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
@@ -88,6 +90,16 @@ const Contact = () => {
         description: "Mohon tunggu, pesan Anda sedang dikirim.",
       });
 
+      // Save to Supabase database
+      await submitContact({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+        status: 'new'
+      });
+
       // Try to send email
       const emailSent = await sendContactEmail(formData);
 
@@ -97,41 +109,25 @@ const Contact = () => {
           title: "✅ Pesan Berhasil Terkirim!",
           description: "Terima kasih atas pesan Anda. Tim kami akan menghubungi Anda dalam 24 jam.",
         });
-
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          subject: '',
-          message: ''
-        });
       } else {
         // Fallback: Show success message even if email service fails
-        // In production, you might want to store the message in a database
         toast({
           title: "📧 Pesan Diterima!",
-          description: "Pesan Anda telah diterima. Kami akan segera menghubungi Anda kembali.",
-        });
-
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          subject: '',
-          message: ''
-        });
-
-        // Log the form data for manual processing
-        console.log('Contact form submission:', {
-          ...formData,
-          timestamp: new Date().toISOString(),
-          targetEmail: 'mulkymalikuldhaher@mail.com'
+          description: "Pesan Anda telah disimpan. Kami akan segera menghubungi Anda kembali.",
         });
       }
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        subject: '',
+        message: ''
+      });
+      resetForm();
+
     } catch (error) {
       console.error('Form submission error:', error);
       

@@ -1,214 +1,212 @@
-
 import Layout from '@/components/Layout';
-import { Factory, Truck, Settings, Shield, Clock, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Factory, Truck, Warehouse, Package, Award, Clock, Shield, Zap } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: Factory,
+      title: "Pengantongan Semen Otomatis",
+      description: "Proses pengantongan dengan teknologi modern dan kapasitas hingga 500 ton per hari. Kontrol kualitas ketat untuk memastikan setiap kantong memenuhi standar Semen Padang.",
+      features: ["Kapasitas 500 ton/hari", "Kualitas terjamin", "Penimbangan akurat", "Kemasan rapi"],
+      price: "Mulai dari Rp 85.000/ton"
+    },
+    {
+      icon: Truck,
+      title: "Distribusi & Logistik",
+      description: "Jaringan distribusi luas dengan armada transport handal. Melayani pengiriman ke seluruh Aceh dan Sumatera Utara dengan jadwal yang fleksibel.",
+      features: ["Jangkauan luas", "Armada lengkap", "Tracking real-time", "Pengiriman tepat waktu"],
+      price: "Sesuai jarak tempuh"
+    },
+    {
+      icon: Warehouse,
+      title: "Penyimpanan Warehouse",
+      description: "Fasilitas penyimpanan modern dengan kapasitas besar dan sistem keamanan 24/7. Penyimpanan semen curah maupun kantong dalam kondisi optimal.",
+      features: ["Kapasitas 10.000 ton", "Keamanan 24/7", "Kondisi optimal", "Akses mudah"],
+      price: "Rp 15.000/ton/bulan"
+    },
+    {
+      icon: Package,
+      title: "Custom Packaging",
+      description: "Layanan pengantongan khusus sesuai kebutuhan klien. Tersedia berbagai ukuran kemasan dari 25kg hingga 50kg dengan branding kustom.",
+      features: ["Ukuran fleksibel", "Branding kustom", "Kualitas premium", "MOQ rendah"],
+      price: "Konsultasi harga"
+    }
+  ];
+
+  const certificates = [
+    { name: "ISO 9001:2015", description: "Sistem Manajemen Kualitas" },
+    { name: "ISO 14001:2015", description: "Sistem Manajemen Lingkungan" },
+    { name: "OHSAS 18001", description: "Keselamatan dan Kesehatan Kerja" },
+    { name: "Sertifikat SNI", description: "Standar Nasional Indonesia" }
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-ywm-red to-red-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">Layanan Kami</h1>
+          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
+            {t('nav.services')} Kami
+          </h1>
           <p className="text-xl max-w-3xl mx-auto animate-fade-in">
-            Solusi Lengkap Pengantongan dan Distribusi Semen Berkualitas Tinggi
+            Solusi Lengkap Pengantongan dan Distribusi Semen dengan Teknologi Modern
           </p>
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Pengantongan Semen */}
-            <div className="text-center animate-fade-in">
-              <div className="w-24 h-24 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Factory className="text-white" size={48} />
-              </div>
-              <h3 className="text-2xl font-bold text-ywm-dark mb-4">Pengantongan Semen</h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Proses pengantongan otomatis dengan teknologi modern untuk menghasilkan 
-                kemasan semen berkualitas tinggi sesuai standar Semen Padang.
-              </p>
-              <ul className="text-left text-gray-600 space-y-2">
-                <li>• Kapasitas produksi hingga 500 ton per hari</li>
-                <li>• Sistem penimbangan otomatis</li>
-                <li>• Kontrol kualitas ketat</li>
-                <li>• Kemasan 40kg dan 50kg</li>
-              </ul>
-            </div>
-
-            {/* Distribusi */}
-            <div className="text-center animate-fade-in">
-              <div className="w-24 h-24 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Truck className="text-white" size={48} />
-              </div>
-              <h3 className="text-2xl font-bold text-ywm-dark mb-4">Distribusi Luas</h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Jaringan distribusi yang mencakup seluruh Aceh dan Sumatera Utara 
-                dengan armada transport yang handal dan sistem logistik yang efisien.
-              </p>
-              <ul className="text-left text-gray-600 space-y-2">
-                <li>• Cakupan seluruh Aceh & Sumut</li>
-                <li>• Armada truck yang terawat</li>
-                <li>• Sistem tracking pengiriman</li>
-                <li>• Pengiriman tepat waktu</li>
-              </ul>
-            </div>
-
-            {/* Layanan Teknis */}
-            <div className="text-center animate-fade-in">
-              <div className="w-24 h-24 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Settings className="text-white" size={48} />
-              </div>
-              <h3 className="text-2xl font-bold text-ywm-dark mb-4">Layanan Teknis</h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Dukungan teknis dan konsultasi untuk penggunaan semen yang optimal 
-                dalam berbagai jenis proyek konstruksi.
-              </p>
-              <ul className="text-left text-gray-600 space-y-2">
-                <li>• Konsultasi teknis aplikasi</li>
-                <li>• Quality assurance</li>
-                <li>• Training penggunaan</li>
-                <li>• Support after sales</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Facilities & Capacity */}
-      <section className="py-20 bg-gray-50">
+      {/* Services Grid */}
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-ywm-dark mb-4">
-              Fasilitas & <span className="text-ywm-red">Kapasitas</span>
+            <h2 className="text-4xl font-bold text-ywm-dark dark:text-white mb-4">
+              Layanan <span className="text-ywm-red">Unggulan</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Infrastruktur modern dan kapasitas produksi yang memadai untuk memenuhi kebutuhan pasar
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+              Kami menyediakan berbagai layanan berkualitas tinggi untuk memenuhi kebutuhan industri konstruksi
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h3 className="text-2xl font-bold text-ywm-dark mb-6">Spesifikasi Mesin & Kapasitas</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-ywm-red rounded-lg flex items-center justify-center">
-                    <Factory className="text-white" size={24} />
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            {services.map((service, index) => (
+              <Card key={index} className="hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-ywm-red rounded-lg flex items-center justify-center">
+                      <service.icon className="text-white" size={32} />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl text-ywm-dark dark:text-white">{service.title}</CardTitle>
+                      <p className="text-ywm-red font-semibold">{service.price}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-ywm-dark">Mesin Pengantongan Otomatis</h4>
-                    <p className="text-gray-600">Kapasitas 500 ton per hari dengan sistem penimbangan digital presisi tinggi</p>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 dark:text-gray-300 mb-4 text-base">
+                    {service.description}
+                  </CardDescription>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-ywm-dark dark:text-white">Keunggulan:</h4>
+                    <ul className="grid grid-cols-2 gap-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                          <Award className="text-ywm-red mr-2" size={16} />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-ywm-red rounded-lg flex items-center justify-center">
-                    <Shield className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-ywm-dark">Sistem Kontrol Kualitas</h4>
-                    <p className="text-gray-600">Laboratorium in-house dengan pengujian setiap batch produksi</p>
-                  </div>
-                </div>
+          {/* CTA */}
+          <div className="text-center">
+            <Link to="/order">
+              <Button className="bg-ywm-red hover:bg-red-700 text-white px-8 py-4 text-lg">
+                Pesan Sekarang
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-ywm-red rounded-lg flex items-center justify-center">
-                    <MapPin className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-ywm-dark">Lokasi Strategis</h4>
-                    <p className="text-gray-600">Berlokasi di Pelabuhan Krueng Geukueh untuk akses distribusi optimal</p>
-                  </div>
-                </div>
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-ywm-dark dark:text-white mb-4">
+              Mengapa Memilih <span className="text-ywm-red">PT. YWM?</span>
+            </h2>
+          </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-ywm-red rounded-lg flex items-center justify-center">
-                    <Clock className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-ywm-dark">Operasional 24/7</h4>
-                    <p className="text-gray-600">Produksi berkelanjutan untuk memenuhi permintaan pasar yang tinggi</p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-white" size={40} />
               </div>
+              <h3 className="text-xl font-semibold text-ywm-dark dark:text-white mb-4">Pengalaman 15+ Tahun</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Berpengalaman melayani kebutuhan konstruksi dengan track record yang terpercaya
+              </p>
             </div>
 
-            <div className="animate-slide-in-right">
-              <img 
-                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Fasilitas Modern"
-                className="rounded-lg shadow-2xl"
-              />
+            <div className="text-center">
+              <div className="w-20 h-20 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-semibold text-ywm-dark dark:text-white mb-4">Kualitas Terjamin</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Produk berkualitas tinggi sesuai standar Semen Padang dengan sertifikasi ISO
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="text-white" size={40} />
+              </div>
+              <h3 className="text-xl font-semibold text-ywm-dark dark:text-white mb-4">Teknologi Modern</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Menggunakan teknologi terdepan untuk efisiensi dan akurasi proses produksi
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quality Standards */}
-      <section className="py-20 bg-white">
+      {/* Certificates */}
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-ywm-dark mb-4">
-              Standar <span className="text-ywm-red">Kualitas</span>
+            <h2 className="text-4xl font-bold text-ywm-dark dark:text-white mb-4">
+              Sertifikasi & <span className="text-ywm-red">Standar Kualitas</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Komitmen kami terhadap kualitas tercermin dalam setiap tahap produksi
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
+              Berkomitmen pada standar kualitas internasional
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 rounded-lg shadow-lg animate-fade-in">
-              <div className="w-16 h-16 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-white" size={32} />
-              </div>
-              <h3 className="font-semibold text-ywm-dark mb-2">ISO 9001:2015</h3>
-              <p className="text-gray-600 text-sm">Sistem Manajemen Kualitas</p>
-            </div>
-
-            <div className="text-center p-6 rounded-lg shadow-lg animate-fade-in">
-              <div className="w-16 h-16 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Factory className="text-white" size={32} />
-              </div>
-              <h3 className="font-semibold text-ywm-dark mb-2">SNI 15-2049</h3>
-              <p className="text-gray-600 text-sm">Standar Nasional Indonesia Semen</p>
-            </div>
-
-            <div className="text-center p-6 rounded-lg shadow-lg animate-fade-in">
-              <div className="w-16 h-16 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Settings className="text-white" size={32} />
-              </div>
-              <h3 className="font-semibold text-ywm-dark mb-2">Quality Control</h3>
-              <p className="text-gray-600 text-sm">Pengujian Setiap Batch</p>
-            </div>
-
-            <div className="text-center p-6 rounded-lg shadow-lg animate-fade-in">
-              <div className="w-16 h-16 bg-ywm-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-white" size={32} />
-              </div>
-              <h3 className="font-semibold text-ywm-dark mb-2">Real-time</h3>
-              <p className="text-gray-600 text-sm">Monitoring Kontinyu</p>
-            </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {certificates.map((cert, index) => (
+              <Card key={index} className="text-center dark:bg-gray-800">
+                <CardContent className="pt-6">
+                  <Award className="w-12 h-12 text-ywm-red mx-auto mb-4" />
+                  <h3 className="font-semibold text-ywm-dark dark:text-white mb-2">{cert.name}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{cert.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact CTA */}
       <section className="py-20 bg-ywm-red text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Butuh Konsultasi Layanan?
+            Butuh Konsultasi Khusus?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Tim ahli kami siap membantu Anda memilih solusi terbaik untuk kebutuhan proyek Anda.
+            Tim ahli kami siap membantu Anda menentukan solusi terbaik untuk kebutuhan proyek Anda
           </p>
-          <a 
-            href="/kontak" 
-            className="inline-block bg-white text-ywm-red px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
-          >
-            Hubungi Tim Kami
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/kontak">
+              <Button className="bg-white text-ywm-red hover:bg-gray-100 px-8 py-4 text-lg">
+                Hubungi Sales
+              </Button>
+            </Link>
+            <Link to="/order">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-ywm-red px-8 py-4 text-lg">
+                Buat Pesanan
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
