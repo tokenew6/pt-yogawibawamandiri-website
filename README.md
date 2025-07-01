@@ -1,7 +1,7 @@
-# PT. Yoga Wibawa Mandiri - Modern Corporate Website 🏢
+# PT. Yoga Wibawa Mandiri – AI-Powered Smart Factory Website 🤖🏢
 
 <div align="center">
-  <img src="public/ywm-logo-new.svg" alt="PT. Yoga Wibawa Mandiri Logo" width="200" height="200"/>
+  <img src="public/ywm-logo-hd.svg" alt="PT. Yoga Wibawa Mandiri Logo HD" width="240"/>
   
   [![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site/deploys)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -10,12 +10,12 @@
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)](https://www.typescriptlang.org/)
   [![Vite](https://img.shields.io/badge/Vite-5.4.19-green)](https://vitejs.dev/)
   
-  **🚀 LATEST VERSION: v2.0 - Comprehensive Update Edition**
+  **🚀 LATEST VERSION: v3.0 – Ultimate Semi-Final AI Edition**
 </div>
 
 ## 🌟 Overview
 
-Modern responsive website untuk PT. Yoga Wibawa Mandiri - perusahaan pengantongan semen terpercaya di Lhokseumawe, Aceh. Website ini dibangun dengan teknologi React + TypeScript + TailwindCSS + Supabase dengan desain transparan dan modern yang telah mengalami upgrade komprehensif.
+Website ini kini berevolusi menjadi **AI-Powered Smart Factory Platform** yang dapat mempelajari perilaku pengguna, memberi rekomendasi cerdas, dan membantu tim penjual sekaligus operasional melalui _multi-agent system_ (WESI – Web Evolving Self-Intelligence). Dibangun dengan React + TypeScript + Supabase + OpenAI Agents, versi 3.0 menghadirkan lompatan fungsi menuju _autonomous website_.
 
 ## 🌐 **LIVE DEMO**
 ### **🔗 https://jakForever.github.io/pt-yogawibawamandiri-website**
@@ -35,7 +35,7 @@ Modern responsive website untuk PT. Yoga Wibawa Mandiri - perusahaan pengantonga
 - **Recharts 3.0.2** - Powerful charting library
 - **React Resizable Panels 3.0.3** - Flexible layout system
 
-### �️ **Security & Performance**
+### 🛡️ **Security & Performance**
 - **Security Vulnerabilities Fixed** - Comprehensive audit dan patching
 - **Bundle Optimization** - Improved code splitting dan lazy loading
 - **Performance Monitoring** - Enhanced metrics tracking
@@ -83,7 +83,7 @@ Modern responsive website untuk PT. Yoga Wibawa Mandiri - perusahaan pengantonga
 - **Real-time Updates** - Live notifications untuk admin
 - **Analytics Dashboard** - Performance metrics tracking
 
-## �️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend Core
 - **React 18.3.1** - Latest stable React dengan Concurrent Features

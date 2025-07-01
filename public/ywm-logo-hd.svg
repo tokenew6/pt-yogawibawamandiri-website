@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" aria-label="PT. Yoga Wibawa Mandiri Logo HD">
+  <defs>
+    <linearGradient id="outerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="100%" stop-color="#7f1d1d" />
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f3f4f6" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="6" dy="6" stdDeviation="12" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="400" cy="400" r="380" fill="none" stroke="url(#outerGrad)" stroke-width="40" filter="url(#shadow)" />
+
+  <!-- Inner red disc -->
+  <circle cx="400" cy="400" r="300" fill="url(#outerGrad)" filter="url(#shadow)" />
+
+  <!-- Central text -->
+  <text x="400" y="460" text-anchor="middle" font-family="'Inter', sans-serif" font-size="200" font-weight="700" fill="url(#innerGrad)" filter="url(#shadow)">YWM</text>
+
+  <!-- Top arc text -->
+  <path id="topArc" d="M120 400 A 280 280 0 0 1 680 400" fill="none" />
+  <text font-family="'Inter', sans-serif" font-size="50" font-weight="700" fill="#1f2937">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">PT. YOGA WIBAWA MANDIRI</textPath>
+  </text>
+
+  <!-- Bottom arc text -->
+  <path id="bottomArc" d="M680 400 A 280 280 0 0 1 120 400" fill="none" />
+  <text font-family="'Inter', sans-serif" font-size="60" font-weight="700" fill="#1f2937">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">LHOKSEUMAWE</textPath>
+  </text>
+</svg>
