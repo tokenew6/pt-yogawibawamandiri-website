@@ -1,4 +1,7 @@
 import { selfHealingPullRequest } from './SelfHealingPR';
+import { env } from './env';
+
+console.info('[AI-Daemon] Starting with env', { nodeEnv: env.NODE_ENV });
 
 async function main() {
   console.log('[AI-Daemon] Listening for tasks (stub)…');
