@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <dropshadow dx="2" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Circle with Gradient -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#redGradient)" stroke-width="8" filter="url(#shadow)"/>
+  
+  <!-- Inner Red Circle -->
+  <circle cx="100" cy="100" r="75" fill="url(#redGradient)" filter="url(#shadow)"/>
+  
+  <!-- Main YWM Text -->
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+        text-anchor="middle" fill="url(#whiteGradient)" filter="url(#shadow)">YWM</text>
+  
+  <!-- Top Arc Text: PT. YOGA WIBAWA MANDIRI -->
+  <path id="topArc" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2937">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      PT. YOGA WIBAWA MANDIRI
+    </textPath>
+  </text>
+  
+  <!-- Bottom Arc Text: LHOKSEUMAWE -->
+  <path id="bottomArc" d="M 170 100 A 70 70 0 0 1 30 100" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f2937">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      LHOKSEUMAWE
+    </textPath>
+  </text>
+</svg>
