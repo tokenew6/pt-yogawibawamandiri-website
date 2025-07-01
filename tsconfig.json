@@ -11,6 +11,7 @@
     },
     "jsx": "react-jsx",
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "noImplicitAny": false,
     "noUnusedParameters": false,
     "skipLibCheck": true,
