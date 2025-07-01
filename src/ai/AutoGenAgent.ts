@@ -24,14 +24,16 @@ const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
 export async function runAgentTask({ goal, context }: AgentTaskOptions): Promise<AgentResult> {
   console.info('[AutoGenAgent] Running task:', goal);
 
-  const completion = await openai.chat.completions.create({
+  const completionParams = {
     model: 'gpt-4o-mini',
     temperature: 0,
     messages: [
       { role: 'system', content: 'You are an autonomous software engineer assistant.' },
       { role: 'user', content: `Goal: ${goal}\nContext: ${JSON.stringify(context ?? {})}` },
     ],
-  });
+  };
+
+  const completion = await openai.chat.completions.create(completionParams);
 
   const output = completion.choices[0].message.content ?? '';
 

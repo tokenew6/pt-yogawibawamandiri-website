@@ -22,7 +22,8 @@
       "vitest/globals",
       "node",
       "vitest",
-      "@testing-library/react"
+      "@testing-library/react",
+      "openai"
     ]
   }
 }
