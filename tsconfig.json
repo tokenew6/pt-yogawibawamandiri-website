@@ -25,6 +25,7 @@
       "node",
       "vitest",
       "@testing-library/react",
+      "@testing-library/jest-dom",
       "openai",
       "zod",
       "react",
