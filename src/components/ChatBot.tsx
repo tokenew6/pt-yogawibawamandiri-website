@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User, Cpu, Zap, Settings, Headphones, Monitor, Smartphone, Wifi, Database, Phone } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User, Cpu, Zap, Settings, Headphones, Monitor, Smartphone, Wifi, Database, Phone, Mic, Volume2, VolumeX } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -17,6 +17,8 @@ interface BotIcon {
 }
 
 const ChatBot = () => {
+  const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -28,7 +30,10 @@ const ChatBot = () => {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [voiceEnabled, setVoiceEnabled] = useState(false);
+  const [speakerEnabled, setSpeakerEnabled] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<any>(null);
 
   // Array of different bot icons
   const botIcons: BotIcon[] = [
@@ -206,6 +211,11 @@ const ChatBot = () => {
   const handleSendMessage = async () => {
     if (!inputMessage.trim()) return;
 
+    if (speakerEnabled) {
+      const utter = new SpeechSynthesisUtterance('Mengirim pesan…');
+      window.speechSynthesis.speak(utter);
+    }
+
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputMessage,
@@ -245,6 +255,27 @@ const ChatBot = () => {
   const handlePhoneClick = () => {
     window.open('tel:+6282304433145', '_self');
   };
+
+  const toggleVoice = () => {
+    if (!SpeechRecognition) return alert('Browser tidak mendukung Speech Recognition');
+    if (voiceEnabled) {
+      recognitionRef.current?.stop();
+      setVoiceEnabled(false);
+    } else {
+      const recog = new SpeechRecognition();
+      recog.lang = 'id-ID';
+      recog.continuous = false;
+      recog.onresult = (e: any) => {
+        const transcript = e.results[0][0].transcript;
+        setInputMessage(transcript);
+      };
+      recog.start();
+      recognitionRef.current = recog;
+      setVoiceEnabled(true);
+    }
+  };
+
+  const toggleSpeaker = () => setSpeakerEnabled((v) => !v);
 
   const CurrentBotIcon = currentBot.icon;
 
@@ -298,7 +329,7 @@ const ChatBot = () => {
           </div>
 
           {/* Quick Action Bar */}
-          <div className="bg-gray-50 px-4 py-2 border-b border-gray-200">
+          <div className="bg-gray-50 px-4 py-2 border-b border-gray-200 flex items-center justify-between">
             <button
               onClick={handlePhoneClick}
               className="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-3 rounded-lg text-sm font-medium flex items-center justify-center space-x-2 transition-colors"
@@ -306,6 +337,14 @@ const ChatBot = () => {
               <Phone size={16} />
               <span>Hubungi: +62 823-0443-3145</span>
             </button>
+            <div className="flex space-x-2 ml-2">
+              <button onClick={toggleVoice} title="Voice Input" className="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                <Mic size={16} className={voiceEnabled ? 'text-ywm-red' : ''} />
+              </button>
+              <button onClick={toggleSpeaker} title="Speaker" className="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                {speakerEnabled ? <Volume2 size={16} className="text-ywm-red" /> : <VolumeX size={16} />}
+              </button>
+            </div>
           </div>
 
           {/* Messages Area */}
