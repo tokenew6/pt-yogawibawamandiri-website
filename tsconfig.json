@@ -31,5 +31,6 @@
       "react",
       "react/jsx-runtime"
     ]
-  }
+  },
+  "include": ["src", "src/types/**/*.d.ts", "vitest.*.ts"]
 }

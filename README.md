@@ -442,7 +442,10 @@ This project is released under the [MIT License](LICENSE).
 - 🐳 **Docker**: Production-ready multistage Dockerfile.
 
 ### v3.0.0 – Ultimate Semi-Final Edition
-- ...
+- 🧠 **AI Upgrades (Ultimate Final)**
+  - Multi-provider LLM routing: JS-Puter → LLM7 → OpenAI fallback
+  - Two-way **Voice Chat** (mic & speaker toggle) in Customer-Service bot
+  - Self-healing PR agent (AutoGen) keeps repo green
 
 ---
 

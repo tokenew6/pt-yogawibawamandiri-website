@@ -122,3 +122,7 @@
 # - Google Services Integration
 # - Performance Optimization
 # - Security Features
+
+# Node project – primary deps in package.json
+# This file is optional for Python-based environments
+openai==1.17.1
