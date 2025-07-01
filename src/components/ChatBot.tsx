@@ -275,7 +275,13 @@ const ChatBot = () => {
     }
   };
 
-  const toggleSpeaker = () => setSpeakerEnabled((v) => !v);
+  const toggleSpeaker = () => {
+    if (!('speechSynthesis' in window)) {
+      alert('Browser tidak mendukung Speech Synthesis');
+      return;
+    }
+    setSpeakerEnabled((v) => !v);
+  };
 
   const CurrentBotIcon = currentBot.icon;
 
