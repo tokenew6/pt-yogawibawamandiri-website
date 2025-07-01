@@ -17,7 +17,8 @@
     "strictNullChecks": false,
     "types": [
       "vite/client",
-      "vitest/globals"
+      "vitest/globals",
+      "node"
     ]
   }
 }
