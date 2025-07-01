@@ -25,7 +25,9 @@
       "node",
       "vitest",
       "@testing-library/react",
-      "openai"
+      "openai",
+      "zod",
+      "react"
     ]
   }
 }
