@@ -10,7 +10,7 @@
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)](https://www.typescriptlang.org/)
   [![Vite](https://img.shields.io/badge/Vite-5.4.19-green)](https://vitejs.dev/)
   
-  **🚀 LATEST VERSION: v3.0 – Ultimate Semi-Final AI Edition**
+  **🚀 LATEST VERSION: v4.0 – Grand Final AI Edition**
 </div>
 
 ## 🌟 Overview
@@ -426,36 +426,24 @@ npm audit fix --force # Force fix breaking changes
 
 ## 📄 License
 
-**Copyright © 2025 PT. Yoga Wibawa Mandiri. All rights reserved.**
-
-This project is proprietary software developed for PT. Yoga Wibawa Mandiri.
+This project is released under the [MIT License](LICENSE).
 
 ---
 
 ## 🔄 Changelog
 
-### v2.0.0 (2025-01-01) - Comprehensive Update Edition
-- 🚀 **MAJOR**: Complete dependency upgrade to latest versions
-- 🔧 **Updated**: Vite 5.4.19, TailwindCSS 3.4.11, all React ecosystem
-- 🛡️ **Security**: Fixed all moderate vulnerabilities
-- ⚡ **Performance**: Enhanced build process dan bundle optimization
-- 🎨 **UI/UX**: Improved component library dan animations
-- 📱 **Mobile**: Better responsive design dan touch interactions
-- 🔍 **SEO**: Enhanced metadata dan structured data
-- 🌐 **PWA**: Improved service worker dan offline support
+### v4.0.0 (2025-07-01) – Grand Final AI Edition
+- 🧠 **AI Agents**: Integrated AutoGen agents for self-healing PRs & content suggestions.
+- ✅ **CI/CD**: GitHub Actions workflow for lint, test & build.
+- 🧪 **Testing**: Added Vitest + Testing Library with coverage.
+- 📜 **Docs**: Updated README, license, contributing & release summary.
+- 🖼️ **HD Logo**: New high-definition SVG logo.
+- 🔐 **Security**: Dependabot & CodeQL enabled.
+- 🐳 **Docker**: Production-ready multistage Dockerfile.
 
-### v1.4.0 (2024-12-15) - Header Enhancement
-- ✅ Transparent header improvements
-- ✅ Logo optimization
-- ✅ Text contrast enhancements
-
-### v1.0.0 (2024-06-30) - Initial Release
-- ✅ Full-stack CMS implementation
-- ✅ Supabase backend integration
-- ✅ Admin dashboard
-- ✅ PWA support
-- ✅ Netlify deployment ready
+### v3.0.0 – Ultimate Semi-Final Edition
+- ...
 
 ---
 
-**🚀 Built with ❤️ for PT. Yoga Wibawa Mandiri | Powered by React + TypeScript + Vite**
+**🚀 Built with ❤️ for PT. Yoga Wibawa Mandiri | Powered by React + TypeScript + Vite + OpenAI Agents**
