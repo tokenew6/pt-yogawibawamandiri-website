@@ -1,0 +1,11 @@
+{
+  "openaiApiKeyEnv": "OPENAI_API_KEY",
+  "defaultModel": "gpt-4o-mini",
+  "agents": [
+    {
+      "name": "self_healer",
+      "description": "Scans repo and proposes pull requests to fix issues",
+      "entry": "src/ai/SelfHealingPR.ts"
+    }
+  ]
+}

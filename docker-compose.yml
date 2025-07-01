@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - ai
+  ai:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["node", "-e", "console.log('AI agent placeholder – connect AutoGen here')"]
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
