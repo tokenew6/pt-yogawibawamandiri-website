@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ScrollToTop from "./components/ScrollToTop";
-import Index from "./pages/Index";
+import ModernIndex from "./pages/ModernIndex";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
@@ -34,7 +34,7 @@ const App = () => (
       <BrowserRouter>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<ModernIndex />} />
             <Route path="/tentang" element={<About />} />
             <Route path="/layanan" element={<Services />} />
             <Route path="/galeri" element={<Gallery />} />
