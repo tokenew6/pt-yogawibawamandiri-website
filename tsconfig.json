@@ -27,7 +27,8 @@
       "@testing-library/react",
       "openai",
       "zod",
-      "react"
+      "react",
+      "react/jsx-runtime"
     ]
   }
 }
